@@ -1,0 +1,14 @@
+PROCEDURE tri_insertion  (t : ARRAY_OF integer)
+VAR
+    i,j: integer;
+BEGIN
+    FOR (i:=1 to length t[i])  DO
+    j:= i-1 ;
+    WHILE (j>0 and t[j] > t[i]) DO
+        j:= j-1 ;
+        t[j+1]:= t[j];
+    END_WHILE
+    t[j+1]=t[i];
+    END_FOR
+    END
+
